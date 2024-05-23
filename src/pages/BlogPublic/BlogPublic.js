@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./blogPublic.scss";
 import { Card, Button } from "react-bootstrap";
 import NavbarPublic from "../../components/NavbarPublic/NavbarPublic";
 import Loading from "../../components/Loading/Loading";
@@ -52,61 +53,22 @@ const BlogPublic = () => {
       return "Invalid date";
     }
   }
-  if (loading) {
-    return (
-      <div>
-        <Loading />
-      </div>
-    );
-  }
+  if (loading) return <Loading />;
 
-  if (error) {
-    return (
-      <div>
-        <Error />
-      </div>
-    );
-  }
+  if (error) return <Error />;
   return (
-    <div
-      style={{
-        display: "flex",
-        minHeight: "100vh",
-        justifyContent: "space-around",
-        flexDirection: "column",
-        gap: "30px",
-      }}
-    >
+    <div className="blog-page">
       <NavbarPublic />
-      <div
-        className="container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Card
-          className=""
-          style={{
-            width: "70%",
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <Card.Img
-            variant="top"
-            src={blog.image}
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              objectFit: "contain",
-            }}
-          />
+      <div className="blog-container">
+        <Card className="blog-card">
+          <Card.Img variant="top" src={blog.image} alt={blog.name} />
           <Card.Body>
-            <Card.Title>{blog.name}</Card.Title>
-            <Card.Text>{blog.description}</Card.Text>
-            <Card.Text className="text-muted">
+            <Card.Title className="blog-title">{blog.name}</Card.Title>
+            <Card.Text className="blog-description">
+              {blog.description}
+            </Card.Text>
+
+            <Card.Text className="blog-date">
               By Admin on{" "}
               {blog.updatedAt
                 ? formatVietnamTime(blog.updatedAt)
@@ -118,5 +80,56 @@ const BlogPublic = () => {
     </div>
   );
 };
+//   return (
+//     <div
+//       style={{
+//         display: "flex",
+//         minHeight: "100vh",
+//         justifyContent: "space-around",
+//         flexDirection: "column",
+//         gap: "30px",
+//       }}
+//     >
+//       <NavbarPublic />
+//       <div
+//         className="container"
+//         style={{
+//           display: "flex",
+//           justifyContent: "center",
+//         }}
+//       >
+//         <Card
+//           className=""
+//           style={{
+//             width: "70%",
+//             display: "flex",
+//             justifyContent: "center",
+//           }}
+//         >
+//           <Card.Img
+//             variant="top"
+//             src={blog.image}
+//             style={{
+//               width: "100%",
+//               display: "flex",
+//               justifyContent: "center",
+//               objectFit: "contain",
+//             }}
+//           />
+//           <Card.Body>
+//             <Card.Title>{blog.name}</Card.Title>
+//             <Card.Text>{blog.description}</Card.Text>
+//             <Card.Text className="text-muted">
+//               By Admin on{" "}
+//               {blog.updatedAt
+//                 ? formatVietnamTime(blog.updatedAt)
+//                 : "Unknown date"}
+//             </Card.Text>
+//           </Card.Body>
+//         </Card>
+//       </div>
+//     </div>
+//   );
+// };
 
 export default BlogPublic;

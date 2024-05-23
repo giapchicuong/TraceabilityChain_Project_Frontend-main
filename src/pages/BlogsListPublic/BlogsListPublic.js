@@ -68,9 +68,9 @@ const BlogsListPublic = () => {
     );
   }
   return (
-    <div>
+    <div className="">
       <NavbarPublic />
-      <div className="product container">
+      <div className="blog container">
         <Row xs={1} md={4} className="">
           {blogs &&
             blogs.length > 0 &&
