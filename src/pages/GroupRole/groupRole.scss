@@ -1,0 +1,61 @@
+.groupRole-container {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 35px;
+  .container {
+    display: flex;
+    gap: 30px;
+  }
+  .table-container {
+    background-color: #ffffff;
+    border-radius: 30px;
+    height: auto;
+    min-height: 87vh;
+  }
+  .table {
+    padding: 20px;
+    border-top: 0 !important;
+    cursor: pointer;
+    .title-groupRole {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    .action-groupRole {
+      border-top: 0 !important;
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      .nav-tabs {
+        width: 100%;
+        border-bottom: 0;
+        .nav-link {
+          background-color: #f0f0f0;
+          color: #939393;
+          font-size: 0.875rem;
+          font-weight: 500;
+          line-height: 35px;
+        }
+        .nav-link.active {
+          background-color: rgb(156, 186, 220);
+          color: #f55151;
+        }
+      }
+      .tab-content {
+        width: 100%;
+        .form-switch {
+          margin-top: 20px;
+          .form-check-input {
+            margin: auto;
+            width: 4em;
+            height: 2em;
+          }
+        }
+      }
+    }
+  }
+}

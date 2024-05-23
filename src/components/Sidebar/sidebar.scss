@@ -1,0 +1,64 @@
+.sidebar-container {
+  .top {
+    min-height: 150px;
+    margin: 20px 0;
+    .brand {
+      font-size: 30px;
+      color: #1877f2;
+      padding-left: 16px;
+      padding-right: 16px;
+      cursor: pointer;
+    }
+    .user {
+      margin: 24px 0px;
+      padding: 16px 20px;
+      display: flex;
+      border-radius: 12px;
+      -webkit-box-align: center;
+      align-items: center;
+      background-color: rgba(145, 158, 171, 0.12);
+      cursor: pointer;
+      .icon {
+        font-size: 20px;
+        padding-right: 10px;
+        color: #637381;
+      }
+      .name {
+        font-weight: 600;
+        line-height: 1.57143;
+        font-size: 0.875rem;
+      }
+    }
+  }
+  .center {
+    padding-right: 16px;
+  }
+  .item {
+    padding: 8px 0px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    i {
+      padding-left: 16px;
+      padding-right: 10px;
+      color: #637381;
+    }
+    span {
+      color: #637381;
+    }
+    &:hover {
+      background-color: rgba(145, 158, 171, 0.08);
+    }
+  }
+  .active {
+    background-color: #e7effa !important;
+
+    i,
+    span {
+      color: #1877f2 !important;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}

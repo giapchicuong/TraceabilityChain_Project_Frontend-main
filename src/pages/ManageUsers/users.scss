@@ -1,0 +1,79 @@
+.users-container {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 35px;
+  .container {
+    display: flex;
+    gap: 30px;
+  }
+  .table-container {
+    background-color: #ffffff;
+    border-radius: 30px;
+    min-height: 87vh;
+    height: auto;
+  }
+  .table {
+    padding: 20px;
+    border-top: 0 !important;
+    cursor: pointer;
+    .add-user {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    .action-user {
+      border-top: 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      select {
+        width: auto;
+        option {
+          min-height: 50px;
+        }
+      }
+    }
+    thead {
+      padding: 20px 0;
+      border-bottom: 1px solid rgb(241, 243, 244);
+      color: rgb(99, 115, 129);
+      background-color: rgb(244, 246, 248);
+    }
+    tbody {
+      border-bottom: 1px solid rgb(241, 243, 244);
+      color: rgb(33, 43, 54);
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      .edit {
+        color: orange;
+        cursor: pointer;
+        padding: 0 5px;
+        font-size: 20px;
+      }
+      .delete {
+        color: red;
+        cursor: pointer;
+        padding: 0 5px;
+        font-size: 20px;
+      }
+    }
+  }
+  .paginate {
+    position: absolute;
+    bottom: 0%;
+    right: 28%;
+    transform: translateX(-40%);
+    border-top: 0 !important;
+    .page-item {
+      a {
+        padding: 5px 20px;
+        margin: 0 5px;
+        border-radius: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+.products-container {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 35px;
+  .container {
+    display: flex;
+    gap: 30px;
+  }
+  .table-container {
+    background-color: #ffffff;
+    border-radius: 30px;
+    min-height: 87vh;
+    height: auto;
+  }
+  .table {
+    padding: 20px;
+    border-top: 0 !important;
+    cursor: pointer;
+    .add-product {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 10px;
+    }
+    .action-product {
+      border-top: 0 !important;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      select {
+        width: auto;
+        option {
+          min-height: 50px;
+        }
+      }
+    }
+    thead {
+      padding: 20px 0;
+      border-bottom: 1px solid rgb(241, 243, 244);
+      color: rgb(99, 115, 129);
+      background-color: rgb(244, 246, 248);
+    }
+    tbody {
+      border-bottom: 1px solid rgb(241, 243, 244);
+      color: rgb(33, 43, 54);
+      .product-text {
+        max-width: 180px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      .image-product {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .image {
+          width: 50px;
+          height: 50px;
+          object-fit: contain;
+          border-radius: 100%;
+        }
+      }
+    }
+    .actions {
+      display: flex;
+      gap: 10px;
+      min-height: 66px;
+      .view {
+        color: rgb(62, 141, 250);
+        cursor: pointer;
+        padding: 0 5px;
+        font-size: 20px;
+      }
+      .delete {
+        color: red;
+        cursor: pointer;
+        padding: 0 5px;
+        font-size: 20px;
+        background-color: transparent;
+      }
+    }
+  }
+}
+.modal-content {
+  .center {
+    display: flex;
+    justify-content: center;
+  }
+}
