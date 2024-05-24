@@ -8,10 +8,12 @@ import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/Row";
 import Loading from "../../components/Loading/Loading";
 import Error from "../../components/Error/Error";
+
 const BlogsListPublic = () => {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+
   const handleGetAllBlog = async () => {
     try {
       const res = await fetchAllBlog();
@@ -30,6 +32,7 @@ const BlogsListPublic = () => {
   useEffect(() => {
     handleGetAllBlog();
   }, []);
+
   function formatVietnamTime(isoString) {
     try {
       const date = new Date(isoString);
@@ -52,6 +55,7 @@ const BlogsListPublic = () => {
       return "Invalid date";
     }
   }
+
   if (loading) {
     return (
       <div>
@@ -67,6 +71,7 @@ const BlogsListPublic = () => {
       </div>
     );
   }
+
   return (
     <div className="">
       <NavbarPublic />
@@ -76,9 +81,13 @@ const BlogsListPublic = () => {
             blogs.length > 0 &&
             blogs.map((item, index) => {
               return (
-                <Col className="" style={{ padding: "10px 0" }}>
+                <Col
+                  className=""
+                  style={{ padding: "10px" }}
+                  key={`rows-${index}`}
+                >
                   <NavLink to={`/public/blog/${item.id}`}>
-                    <Card style={{ width: "18rem" }} key={`rows-${index}`}>
+                    <Card style={{ width: "100%" }}>
                       <Card.Img
                         variant="top"
                         src={item.image}
@@ -86,7 +95,7 @@ const BlogsListPublic = () => {
                       />
                       <Card.Body>
                         <Card.Title
-                          class="d-inline-block text-truncate"
+                          className="d-inline-block text-truncate"
                           style={{ maxWidth: "250px" }}
                         >
                           {item.name}
