@@ -71,6 +71,7 @@ export const StateContextProvider = ({ children }) => {
     });
 
     const parsedProducts = products.map((product, i) => ({
+      id: product.id,
       name: product.name,
       description: product.description,
       typeProduct: product.typeProduct,

@@ -9,7 +9,6 @@ import { toast } from "react-toastify";
 const ModalProduct = ({ show, onHide }) => {
   const [isLoading, setIsLoading] = useState(false);
   const { createProduct } = useStateContext();
-  const { address, getAllProductByOwner } = useStateContext();
   const formatDate = () => {
     const today = new Date();
     const dd = String(today.getDate()).padStart(2, "0");

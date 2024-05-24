@@ -28,7 +28,7 @@ function ModalProductQR(props) {
         </Modal.Header>
         <Modal.Body className="center" ref={qrCodeRef}>
           <QRCode
-            value={`https://traceabilitychain-project-frontend-main.onrender.com/public/product/${dataModal?.pId}`}
+            value={`https://traceabilitychain-project-frontend-main.onrender.com/public/product/${dataModal?.id}`}
             size={300}
             className="center"
           />
